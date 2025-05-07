@@ -143,3 +143,15 @@ button[data-start]:disabled {
   text-shadow: 0 0 5px #000;
   filter: grayscale(40%);
 }
+
+input:disabled {
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  color: #888;
+  border: 1px solid #444;
+  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.3),
+    inset 0 0 20px rgba(255, 0, 255, 0.2);
+  opacity: 0.7;
+  cursor: not-allowed;
+  filter: grayscale(30%) blur(0.5px);
+  transition: all 0.3s ease-in-out;
+}
