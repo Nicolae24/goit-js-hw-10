@@ -1,0 +1,98 @@
+.blink {
+  animation: blink-animation 1s steps(2, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes flash {
+  0%,
+  100% {
+    background-color: #0d0d0d;
+  }
+  50% {
+    background-color: #ffffff;
+  }
+}
+
+.flash {
+  animation: flash 0.2s ease-in-out 3;
+}
+
+/* .timer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.field {
+  background-color: #222;
+  color: #00ffcc;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+  text-align: center;
+  min-width: 80px;
+}
+
+.value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: block;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 5px;
+  display: block;
+} */
+
+body {
+  background-color: #0d0d0d;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.timer {
+  display: flex;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.field {
+  background: linear-gradient(135deg, #0ff, #0f0, #f0f);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #0ff, 0 0 60px #0f0, 0 0 90px #f0f;
+  text-align: center;
+  min-width: 100px;
+  transition: transform 0.3s ease;
+}
+
+.field:hover {
+  transform: scale(1.05);
+}
+
+.value {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0f0;
+}
+
+.label {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #ccc;
+  text-shadow: 0 0 5px #f0f;
+}

@@ -4,20 +4,44 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Homework 10</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
-
     <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+      <header class="header">
+        <div class="container">
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./1-timer.html">Timer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./2-snackbar.html">Snackbar</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div class="container">
+        <h1 class="main-title">Welcome to Homework 10</h1>
+        <div class="main-content">
+          <p>
+            Explore the features of this project by navigating to the Timer and
+            Snackbar pages.
+          </p>
+          <a href="./1-timer.html"
+            ><button class="button">Go to Timer</button></a
+          >
+          <a href="./2-snackbar.html"
+            ><button class="button">Go to Snackbar</button></a
+          >
+        </div>
+      </div>
     </main>
-
-    <load src="./partials/footer.html" />
-
-    <script type="module" src="./main.js"></script>
   </body>
 </html>

@@ -1,0 +1,178 @@
+.form {
+  background: rgba(0, 0, 0, 0.7); /* Чорний фон для форми з напівпрозорістю */
+  border-radius: 20px;
+  padding: 40px 50px;
+  box-shadow: 0 10px 50px rgba(0, 255, 255, 0.5); /* Неонова тінь для форми */
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Заголовок форми */
+.form-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #0aff99;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Неоновий ефект */
+  font-weight: bold;
+  letter-spacing: 2px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5),
+      0 0 20px rgba(0, 255, 255, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 25px rgba(0, 255, 255, 1), 0 0 40px rgba(0, 255, 255, 0.8);
+  }
+}
+
+/* Мітка для інпутів */
+.form-label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #ddd;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  animation: flicker 3s linear infinite;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    color: #fff;
+  }
+  50% {
+    color: #0aff99;
+  }
+}
+
+/* Поле вводу */
+.form-input {
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  font-size: 18px;
+  border: 2px solid #0aff99;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form-input:focus {
+  border-color: #0aff99;
+  box-shadow: 0 0 20px #0aff99;
+  outline: none;
+  animation: glowing 1.5s infinite alternate;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 10px #0aff99;
+  }
+  100% {
+    box-shadow: 0 0 20px #0aff99;
+  }
+}
+
+/* Радіокнопки */
+.form-fieldset {
+  border: none;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.form-legend {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #aaa;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.form-radio-label {
+  display: inline-block;
+  margin-right: 25px;
+  font-size: 18px;
+  color: #ddd;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.form-radio {
+  margin-right: 8px;
+}
+
+/* Кнопка */
+.form-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  background-color: #0aff99;
+  color: #222;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 6px 20px rgba(0, 255, 255, 0.5);
+  animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.form-button:hover {
+  background-color: #0cb479;
+  transform: scale(1.05);
+}
+
+.form-button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* Повідомлення iziToast */
+.iziToast {
+  z-index: 9999 !important;
+  opacity: 1 !important;
+  transition: opacity 0.5s ease-out;
+}
+
+.iziToast.success {
+  background-color: #0aff99;
+  animation: fadeIn 1s ease-out;
+}
+
+.iziToast.error {
+  background-color: #ff5555;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
