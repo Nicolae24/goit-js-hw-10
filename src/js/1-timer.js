@@ -101,9 +101,9 @@ function updateTimerDis(ms) {
 }
 
 function showFlashAnimation() {
-    document.body.classList.add('flash');
+    const flashTarget = document.querySelector('.flash-target');
+    flashTarget.classList.add('flash');
     setTimeout(() => {
-        document.body.classList.remove('flash');
-    }, 600); // після 3 разів
+        flashTarget.classList.remove('flash');
+    }, 600);
 }
-
